@@ -1,0 +1,18 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "Tutorial Behavior Pack",
+        "name": "Tutorial Behavior Pack",
+        "uuid": "bc2a0bc9-e3a2-4702-9319-d4d3231dfdbc",
+        "version": [1,0,0],
+        "min_engine_version": [1,13,0]
+    },
+    "modules": [
+        {
+            "description": "_",
+            "type": "data",
+            "uuid": "891f5751-bb0e-47c6-91f0-fdc4e76949ef",
+            "version": [1,0,0]
+        }
+    ]
+}
