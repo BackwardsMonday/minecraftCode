@@ -262,7 +262,8 @@
             "on_outside_range": {
               "event": "minecraft:stop_exploding",
               "target": "self"
-            },
+            }
+        },
           "minecraft:physics": {
         },
         "minecraft:pushable": {
@@ -364,4 +365,4 @@
               }  
       }
     }
-  }
+  
