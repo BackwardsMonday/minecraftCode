@@ -125,16 +125,11 @@
         "minecraft:explode": {
           "fuseLength": 1.5,
           "fuseLit": true,
-            "power": 2,
+          "power": 2,
           "causesFire": false
-          },
-        
-        "minecraft:scale":{
-          "value": 2
+        }
       }
-    }
-  },
-  
+    },
 
     "components": {
       "minecraft:damage_sensor": {
@@ -243,11 +238,15 @@
         "priority": 9
       },
       "minecraft:behavior.nearest_attackable_target": {
-          "priority": 1,
+          "priority": 0,
           "must_see": true,
           "entity_types": [
             {
-              "filters": {"other_with_families": "player"},
+              "filters": {
+                "test": "is_family",
+                "subject": "other",
+                "value": "player"
+              },
               "max_dist": 16
             }
           ]
@@ -264,7 +263,7 @@
             "target": "self"
           }
       },
-        "minecraft:physics": {
+      "minecraft:physics": {
       },
       "minecraft:pushable": {
         "is_pushable": true,
@@ -273,7 +272,7 @@
       "minecraft:conditional_bandwidth_optimization": {
       }
     },
-    
+
 
     "events": {
       "become_zombie": {
@@ -349,22 +348,19 @@
         }
       },
       "minecraft:start_exploding": {
-              "add": {
-                "component_groups": [
-                  "minecraft:exploding"
-                ]
-              }
-            },
-            "minecraft:stop_exploding": {
-              "remove": {
-                "component_groups": [
-                  "minecraft:exploding"
-                ]
-              }
-            }  
+        "add": {
+          "component_groups": [
+            "minecraft:exploding"
+          ]
+        }
+      },
+      "minecraft:stop_exploding": {
+        "remove": {
+          "component_groups": [
+            "minecraft:exploding"
+          ]
+        }
+      }
     }
   }
 }
-
-
-
