@@ -119,17 +119,22 @@
           },
           "minecraft:behavior.controlled_by_player": {
             "priority": 0
-          },
-          "minecraft:exploding": {
-            "minecraft:explode": {
-              "fuseLength": 1.5,
-              "fuseLit": true,
-              "power": 2,
-              "causesFire": false
-            }
+          }
+        },
+        "minecraft:exploding": {
+          "minecraft:explode": {
+            "fuseLength": 1.5,
+            "fuseLit": true,
+             "power": 2,
+            "causesFire": false
+            },
+          
+          "minecraft:scale":{
+            "value": 2
         }
-      },
-  
+      }
+    },
+    
   
       "components": {
         "minecraft:damage_sensor": {
@@ -236,11 +241,8 @@
         },
         "minecraft:behavior.random_look_around": {
           "priority": 9
-        },
-            "minecraft:scale":{
-                "value": 2
-            }
-        },
+        }
+            },
         "minecraft:behavior.nearest_attackable_target": {
             "priority": 1,
             "must_see": true,
